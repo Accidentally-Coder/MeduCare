@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Notification from './pages/Notification';
 import PatientRegister from './pages/PatientRegister';
 import SignUp from './pages/SignUp';
+import HomePage from './pages/HomePage';
 
 
 function App() {

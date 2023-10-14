@@ -152,12 +152,12 @@ module.exports.forgotPasswordController = async (req, res) => {
     }
 };
 
-module.exports.registerDoctorController = async(req,res) => {
+module.exports.registerDoctorController = async (req, res) => {
     try {
-        const {name,phone,license,address,email,specialization,fees} = req.body;
+        const { name, phone, license, address, email, specialization, fees } = req.body;
         const fileName = req.file.buffer;
-        if(!name || !phone || !license || !address || !email || !specialization || !fees || !fileName){
-            return res.send({message: "All fields are required"});
+        if (!name || !phone || !license || !address || !email || !specialization || !fees || !fileName) {
+            return res.send({ message: "All fields are required" });
         }
         const doctor = await new doctorModel({
             name,
@@ -178,7 +178,7 @@ module.exports.registerDoctorController = async(req,res) => {
     } catch (error) {
         console.log(error);
         return res.status(500).send({
-            success:false,
+            success: false,
             message: 'Something went wrong',
             error
         });
@@ -186,33 +186,33 @@ module.exports.registerDoctorController = async(req,res) => {
 }
 
 // POST || register Patient
-module.exports.registerPatientController = async(req,res) => {
+module.exports.registerPatientController = async (req, res) => {
     try {
-        const {name,phone,license,address,email,specialization,fees} = req.body;
+        const { name, phone, address, height, weight, age, email } = req.body;
         const fileName = req.file.buffer;
-        if(!name || !phone || !license || !address || !email || !specialization || !fees || !fileName){
-            return res.send({message: "All fields are required"});
+        if (!name || !phone || !address || !height || !weight || !age || !email || !fileName) {
+            return res.send({ message: "All fields are required" });
         }
-        const doctor = await new doctorModel({
+        const patient = await new doctorModel({
             name,
             phone,
-            license,
             address,
+            height,
+            weight,
+            age,
             email,
-            specialization,
-            fees,
             fileName
         }).save();
 
         return res.status(201).send({
             success: true,
             message: 'User Registered Successfully!',
-            doctor
+            patient
         });
     } catch (error) {
         console.log(error);
         return res.status(500).send({
-            success:false,
+            success: false,
             message: 'Something went wrong',
             error
         });

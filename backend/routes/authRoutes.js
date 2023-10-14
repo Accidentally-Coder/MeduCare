@@ -8,7 +8,8 @@ const router = express.Router();
 //REGISTER irrespective of doctor or patient || METHOD POST
 router.post('/register', authController.registerController);
 
-router.post('/register-doctor',upload.single("avatar"),authController.registerDoctorController);
+router.post('/register-doctor', upload.single("avatar"), authController.registerDoctorController);
+router.post('/register-patient', upload.single("avatar"), authController.registerPatientController);
 
 //LOGIN || METHOD POST
 router.post('/login', authController.loginController);

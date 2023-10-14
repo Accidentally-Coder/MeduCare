@@ -6,10 +6,20 @@ import { PiNotePencilFill } from 'react-icons/pi';
 import { RiNotification2Fill } from 'react-icons/ri';
 import { SlLogin, SlLogout } from 'react-icons/sl';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../context/auth';
 
 
 
 const Header = () => {
+    const [auth, setAuth] = useAuth();
+    const handleLogout = () => {
+        setAuth({
+            ...auth,
+            user: null,
+            token: ''
+        });
+        localStorage.removeItem('auth');
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ height: '100px', backgroundColor: '#060212' }}>
@@ -32,40 +42,36 @@ const Header = () => {
                             <NavLink to="/" className="nav-link" aria-current="page" href="#">
                                 <CgFeed size={30} />Home
                             </NavLink>
-                            <NavLink to="/login" className="nav-link" href="#">
-                                <SlLogin size={30} />Login
-                            </NavLink>
-                            <NavLink to="/signup" className="nav-link" href="#">
-                                <PiNotePencilFill size={30} />SignUp
-                            </NavLink>
-                            <NavLink to="/doctor-list" className="nav-link" href="#">
-                                <FaUserDoctor size={30} /> Doctor
-                            </NavLink>
-                            <NavLink to="/appointment" className="nav-link" href="#">
-                                <FcOvertime size={30} />{' '} Appointment
-                            </NavLink>
-                            <NavLink to="/notification" className="nav-link" href="#">
-                                <RiNotification2Fill size={28} /> Notification
-                            </NavLink>
-                            <NavLink to='/' className='nav-link'></NavLink>
-                            <NavLink to="/login" className="nav-link" href="#">
-                                <SlLogout size={30} />LogOut
-                            </NavLink>
-                            {/* {
+                            {
                                 !auth.user ? (
                                     <>
-                                        <NavLink to="/login" className="nav-link" href="#">Login</NavLink>
-                                        <NavLink to="/signup" className="nav-link" href="#">SignUp</NavLink>
+                                        <NavLink to="/login" className="nav-link" href="#">
+                                            <SlLogin size={30} />Login
+                                        </NavLink>
+                                        <NavLink to="/signup" className="nav-link" href="#">
+                                            <PiNotePencilFill size={30} />SignUp
+                                        </NavLink>
                                     </>
                                 ) : (
                                     <>
-                                        <NavLink to="/cart" className="nav-link" href="#">Cart</NavLink>
-                                        <NavLink to="/bankinfo" className="nav-link" href="#">Bank Info</NavLink>
+
+
+                                        <NavLink to="/doctor-list" className="nav-link" href="#">
+                                            <FaUserDoctor size={30} /> Doctor
+                                        </NavLink>
+                                        <NavLink to="/appointment" className="nav-link" href="#">
+                                            <FcOvertime size={30} />{' '} Appointment
+                                        </NavLink>
+                                        <NavLink to="/notification" className="nav-link" href="#">
+                                            <RiNotification2Fill size={28} /> Notification
+                                        </NavLink>
                                         <NavLink to='/' className='nav-link'>{auth?.user?.name}</NavLink>
-                                        <NavLink to="/login" onClick={handleLogout} className="nav-link" href="#">LogOut</NavLink>
+                                        <NavLink to="/login" className="nav-link" href="#">
+                                            <SlLogout size={30} onClick={handleLogout} />LogOut
+                                        </NavLink>
                                     </>
                                 )
-                            } */}
+                            }
                         </div>
                     </div>
                 </div>

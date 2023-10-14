@@ -39,9 +39,9 @@ const Login = () => {
                 // const { data } = await axios.get(`http://localhost:8082/api/bank/checkForEmail/${email}`);
                 // console.log(data);
                 // if (data?.success) {
-                //     setTimeout(() => {
-                //         navigate("/");
-                //     }, 1000);
+                setTimeout(() => {
+                    navigate("/");
+                }, 1000);
                 // }
                 // else {
                 //     toast.success('First setup your bank account');

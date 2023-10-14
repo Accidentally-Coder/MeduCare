@@ -30,14 +30,10 @@ const doctorSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    dp:{
-        type: Buffer,
-        required: true,
-    },
 },
 {
     timestamps:true
 }
 );
 
-module.exports = mongoose.model('doctors',doctorSchema);
+module.exports = mongoose.model('doctor',doctorSchema);

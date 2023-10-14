@@ -1,8 +1,8 @@
 const JWT = require("jsonwebtoken");
 const userModel = require("../models/userModel");
 const authHelper = require('./../helpers/authHelper');
-const path = require('path');
 const doctorModel = require('../models/doctorModel');
+const patientModel = require("../models/patientModel");
 
 // sign up
 module.exports.registerController = async (req, res) => {
@@ -155,8 +155,7 @@ module.exports.forgotPasswordController = async (req, res) => {
 module.exports.registerDoctorController = async (req, res) => {
     try {
         const { name, phone, license, address, email, specialization, fees } = req.body;
-        const fileName = req.file.buffer;
-        if (!name || !phone || !license || !address || !email || !specialization || !fees || !fileName) {
+        if (!name || !phone || !license || !address || !email || !specialization || !fees) {
             return res.send({ message: "All fields are required" });
         }
         const doctor = await new doctorModel({
@@ -166,8 +165,7 @@ module.exports.registerDoctorController = async (req, res) => {
             address,
             email,
             specialization,
-            fees,
-            fileName
+            fees
         }).save();
 
         return res.status(201).send({
@@ -189,11 +187,11 @@ module.exports.registerDoctorController = async (req, res) => {
 module.exports.registerPatientController = async (req, res) => {
     try {
         const { name, phone, address, height, weight, age, email } = req.body;
-        const fileName = req.file.buffer;
-        if (!name || !phone || !address || !height || !weight || !age || !email || !fileName) {
+        if (!name || !phone || !address || !height || !weight || !age || !email) {
             return res.send({ message: "All fields are required" });
         }
-        const patient = await new doctorModel({
+
+        const patient = await new patientModel({
             name,
             phone,
             address,
@@ -201,7 +199,6 @@ module.exports.registerPatientController = async (req, res) => {
             weight,
             age,
             email,
-            fileName
         }).save();
 
         return res.status(201).send({

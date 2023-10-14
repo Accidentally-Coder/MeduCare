@@ -11,6 +11,7 @@ import DoctorRegister from './pages/DoctorRegister';
 import ForgotPassword from './pages/ForgotPassword';
 import Login from './pages/Login';
 import Notification from './pages/Notification';
+import PatientRegister from './pages/PatientRegister';
 import SignUp from './pages/SignUp';
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/notification' element={<Notification />} />
         <Route path='/doctor-list' element={<DoctorList />} />
         <Route path='/doctor-register' element={<DoctorRegister />} />
+        <Route path='/patient-register' element={<PatientRegister />} />
       </Routes>
     </>
   );

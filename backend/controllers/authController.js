@@ -1,6 +1,8 @@
 const JWT = require("jsonwebtoken");
 const userModel = require("../models/userModel");
 const authHelper = require('./../helpers/authHelper');
+const path = require('path');
+const doctorModel = require('../models/doctorModel');
 
 // sign up
 module.exports.registerController = async (req, res) => {
@@ -149,3 +151,70 @@ module.exports.forgotPasswordController = async (req, res) => {
         });
     }
 };
+
+module.exports.registerDoctorController = async(req,res) => {
+    try {
+        const {name,phone,license,address,email,specialization,fees} = req.body;
+        const fileName = req.file.buffer;
+        if(!name || !phone || !license || !address || !email || !specialization || !fees || !fileName){
+            return res.send({message: "All fields are required"});
+        }
+        const doctor = await new doctorModel({
+            name,
+            phone,
+            license,
+            address,
+            email,
+            specialization,
+            fees,
+            fileName
+        }).save();
+
+        return res.status(201).send({
+            success: true,
+            message: 'User Registered Successfully!',
+            doctor
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send({
+            success:false,
+            message: 'Something went wrong',
+            error
+        });
+    }
+}
+
+// POST || register Patient
+module.exports.registerPatientController = async(req,res) => {
+    try {
+        const {name,phone,license,address,email,specialization,fees} = req.body;
+        const fileName = req.file.buffer;
+        if(!name || !phone || !license || !address || !email || !specialization || !fees || !fileName){
+            return res.send({message: "All fields are required"});
+        }
+        const doctor = await new doctorModel({
+            name,
+            phone,
+            license,
+            address,
+            email,
+            specialization,
+            fees,
+            fileName
+        }).save();
+
+        return res.status(201).send({
+            success: true,
+            message: 'User Registered Successfully!',
+            doctor
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send({
+            success:false,
+            message: 'Something went wrong',
+            error
+        });
+    }
+}

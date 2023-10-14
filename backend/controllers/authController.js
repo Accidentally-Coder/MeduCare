@@ -14,7 +14,7 @@ module.exports.registerController = async (req, res) => {
         }
 
         // check user from collection
-        const existingUser = await userModel.findOne({ email });
+        const existingUser = await userModel.findOne({ email }).maxTimeMS(60000);
 
         //check existing user
         if (existingUser) {

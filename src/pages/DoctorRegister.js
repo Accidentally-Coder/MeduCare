@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/DoctorRegistration.css';
 import Layout from '../components/Layout';
+import '../css/DoctorRegistration.css';
 
 function DoctorRegister() {
     return (
@@ -63,8 +63,7 @@ function DoctorRegister() {
                                         <option value="gs">General Surgery</option>
                                     </select>
                                 </div>
-
-                                <button type="submit" className="btn">
+                                <button type="submit" className="btn btn-rd">
                                     <h4>Register</h4>
                                 </button>
                             </form>

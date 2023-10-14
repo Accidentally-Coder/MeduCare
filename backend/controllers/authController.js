@@ -12,7 +12,6 @@ module.exports.registerController = async (req, res) => {
         if (!email || !password || !answer) {
             return res.send({ message: 'All fields are required.' });
         }
-
         // check user from collection
         const existingUser = await userModel.findOne({ email }).maxTimeMS(60000);
 
@@ -23,16 +22,14 @@ module.exports.registerController = async (req, res) => {
                 message: 'Already Registered! Please log in.',
             });
         }
-
-
         //register user
         const hashedPassword = await authHelper.hashPassword(password);
-
         //save new user to the collection
         const user = await new userModel({
             email,
             password: hashedPassword,
-            answer
+            answer,
+            role: "0"
         }).save();
 
         return res.status(201).send({
@@ -102,10 +99,7 @@ module.exports.loginController = async (req, res) => {
             message: 'User Logged in successfully !',
             user: {
                 _id: user._id,
-                name: user.name,
                 email: user.email,
-                phone: user.phone,
-                address: user.address,
                 role: user.role
             },
             token

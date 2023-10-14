@@ -7,11 +7,11 @@ import Header from './components/Header';
 import Layout from './components/Layout';
 import Appointment from './pages/Appointment';
 import DoctorList from './pages/DoctorList';
+import DoctorRegister from './pages/DoctorRegister';
 import ForgotPassword from './pages/ForgotPassword';
 import Login from './pages/Login';
 import Notification from './pages/Notification';
 import SignUp from './pages/SignUp';
-import DoctorRegister from './pages/DoctorRegister';
 
 
 function App() {

@@ -1,61 +1,63 @@
-// import axios from 'axios';
+import axios from 'axios';
 import React, { useState } from "react";
-// import toast from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
-// import { useAuth } from "../context/auth";
+import { useAuth } from "../context/auth";
 
 const Login = () => {
 
     //variables and setter functions to capture data entered in the form input fields
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     // context API variable and setter function
-    // const [auth, setAuth] = useAuth();
+    const [auth, setAuth] = useAuth();
 
     //creating hook for navigation
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    // //form function
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         console.log(email, password);
-    //         const res = await axios.post('http://localhost:8080/api/auth/login',
-    //             { email, password });
-    //         if (res.data.success) {
-    //             toast.success(res.data.message);
-    //             //context API stuff
-    //             setAuth({
-    //                 ...auth,
-    //                 user: res.data.user,
-    //                 token: res.data.token,
-    //             });
-    //             //saving API stuffs to local storage
-    //             localStorage.setItem('auth', JSON.stringify(res.data));
-    //             //navigate to bank account creation if account does not exist
-    //             const { data } = await axios.get(`http://localhost:8082/api/bank/checkForEmail/${email}`);
-    //             console.log(data);
-    //             if (data?.success) {
-    //                 setTimeout(() => {
-    //                     navigate("/");
-    //                 }, 1000);
-    //             }
-    //             else {
-    //                 toast.success('First setup your bank account');
-    //                 setTimeout(() => {
-    //                     navigate("/bankinfo");
-    //                 }, 1000);
-    //             }
-    //         } else {
-    //             toast.error(res.data.message);
-    //         }
+    //form function
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            console.log(email, password);
+            const res = await axios.post('http://localhost:8080/api/auth/login',
+                { email, password });
+            console.log(res);
+            if (res.data.success) {
+                toast.success(res.data.message);
+                //context API stuff
+                setAuth({
+                    ...auth,
+                    user: res.data.user,
+                    token: res.data.token,
+                });
+                //saving API stuffs to local storage
+                localStorage.setItem('auth', JSON.stringify(res.data));
 
-    //     } catch (error) {
-    //         console.log(error);
-    //         toast.error('Sorry! Something went wrong. :(');
-    //     }
-    // }
+                //navigate to bank account creation if account does not exist
+                // const { data } = await axios.get(`http://localhost:8082/api/bank/checkForEmail/${email}`);
+                // console.log(data);
+                // if (data?.success) {
+                //     setTimeout(() => {
+                //         navigate("/");
+                //     }, 1000);
+                // }
+                // else {
+                //     toast.success('First setup your bank account');
+                //     setTimeout(() => {
+                //         navigate("/bankinfo");
+                //     }, 1000);
+                // }
+                // } else {
+                //     toast.error(res.data.message);
+            }
+
+        } catch (error) {
+            console.log(error);
+            toast.error('Sorry! Something went wrong. :(');
+        }
+    }
     return (
         <Layout>
             <div className="row flex d-flex justify-center shadow-lg bg-body rounded"
@@ -70,25 +72,24 @@ const Login = () => {
                     <h4 class="fw-bold text-center mt-5 mb-5">Sign In to your Account</h4>
 
                     {/** Login Form */}
-                    <form>
-                        {/* onSubmit={handleSubmit} */}
+                    <form onSubmit={handleSubmit}>
                         <div class="mb-3 mt-3 px-5">
                             <label for="email" class="form-label">Email:</label>
                             <input type="email"
-                                // value={email}
-                                // onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 className="form-control" id="email" placeholder="Enter email" name="email" required />
                         </div>
                         <div class="mb-5 mt-3 px-5">
                             <label for="pwd" class="form-label">Password:</label>
                             <input type="password"
-                                // value={password}
-                                // onChange={(e) => setPassword(e.target.value)}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 className="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
                         </div>
                         <div style={{ marginLeft: '400px', marginTop: '-30px' }}>
                             <button type="button" class="btn"
-                            //onClick={() => { setTimeout(() => { navigate("/forgot-password"); }, 1000); }}
+                                onClick={() => { setTimeout(() => { navigate("/forgot-password"); }, 1000); }}
                             ><u>Forgot Password?</u></button>
                         </div>
                         <div style={{ marginLeft: '260px' }}>

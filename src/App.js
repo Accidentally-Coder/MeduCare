@@ -11,6 +11,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import Login from './pages/Login';
 import Notification from './pages/Notification';
 import SignUp from './pages/SignUp';
+import DoctorRegister from './pages/DoctorRegister';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/appointment' element={<Appointment />} />
         <Route path='/notification' element={<Notification />} />
         <Route path='/doctor-list' element={<DoctorList />} />
+        <Route path='/doctor-register' element={<DoctorRegister />} />
       </Routes>
     </>
   );

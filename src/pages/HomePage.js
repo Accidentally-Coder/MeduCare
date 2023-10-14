@@ -1,5 +1,7 @@
 import React from 'react';
 import Post from '../components/posts';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 
 const posts = [
   {
@@ -16,16 +18,9 @@ const posts = [
 
 function HomePage() {
   return (
-    <div className="container mt-4">
-        {posts.map((post, index) => (
-          <Post
-            key={index}
-            userName={post.userName}
-            content={post.content}
-            imageUrl={post.imageUrl}
-          />
-        ))}
-      </div>
+    <Layout>
+      <Hero/>
+    </Layout>
   )
 }
 

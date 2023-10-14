@@ -1,0 +1,36 @@
+/* Additional custom styles for the post-box */
+.post-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 400px; /* Adjust the width as needed */
+  }
+  
+  /* Custom styles for the profile picture */
+  .profile-picture {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    border-radius: 50%; /* Makes the image round (for circular avatars) */
+  }
+  
+  /* Custom styles for the user name */
+  .profile-name {
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust the font size as needed */
+  }
+  
+  /* Custom styles for comments */
+  .comment {
+    margin-bottom: 10px;
+  }
+  
+  .commenter-img {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .comment-text {
+    margin-left: 10px; /* Spacing between commenter image and text */
+  }
+  

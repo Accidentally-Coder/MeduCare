@@ -104,9 +104,9 @@ const Login = () => {
                         Welcome to our Community!
                     </h3>
 
-                    <p class="text-white fs-6 fw-light" style={{ marginTop: '100px', marginLeft: '20px' }}>
-                        Ready to embark on a seamless shopping journey?
-                        Sign up now to unlock a world of convenience and increadible deals.
+                    <p class="text-white fs-6 fw-light" style={{ marginTop: '80px', marginLeft: '20px' }}>
+                        Ready to embark on a comprehensive healthcare and medical education experience?
+                        Sign up now to access a world of convenience and incredible resources tailored as your healthcare clinic and medical education needs.
                     </p>
                     <div class="mt-5" style={{ marginLeft: '120px' }}>
                         <Link to="/signup" type="button" class="btn btn-light">Sign Up</Link>

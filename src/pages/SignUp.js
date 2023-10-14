@@ -108,7 +108,7 @@ const Signup = () => {
                     </h3>
                     <h6 class="text-white mt-5" style={{ marginLeft: '80px' }}>Already a member?</h6>
                     <p class="text-white fs-6 fw-light" style={{ marginTop: '20px', marginLeft: '40px' }}>
-                        Sign In now to unlock a world of convenience and increadible deals.
+                        Sign in now to unlock a world of convenience, access invaluable resources and expert advice for your health and medical education journey.
                     </p>
                     <div class="mt-5" style={{ marginLeft: '120px' }}>
                         <Link to='/login' type="submit" className="btn btn-light">Sign In</Link>

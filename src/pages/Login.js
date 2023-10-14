@@ -40,7 +40,7 @@ const Login = () => {
                 // console.log(data);
                 // if (data?.success) {
                 setTimeout(() => {
-                    navigate("/");
+                    navigate("/homepage");
                 }, 1000);
                 // }
                 // else {

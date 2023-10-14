@@ -12,6 +12,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import Login from './pages/Login';
 import Notification from './pages/Notification';
 import SignUp from './pages/SignUp';
+import HomePage from './pages/HomePage';
 
 
 function App() {

@@ -1,0 +1,22 @@
+.sidebar {
+    width: 200px; /* Adjust the width as needed */
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Display options vertically */
+  }
+  
+  .sidebar-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #555;
+  }
+  
+  .active {
+    background-color: #555; /* Style for the active link */
+  }
+  

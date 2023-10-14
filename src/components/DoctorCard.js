@@ -1,3 +1,5 @@
+// from patient's view
+
 import React from 'react'
 
 const DoctorCard = () => {

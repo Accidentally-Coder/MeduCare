@@ -15,14 +15,14 @@ const Hero = () => {
                     <div className="hero-title">
                         <div className="orange-circle" />
                         <h1>
-                            Discover <br/>
-                            Most Suitable <br/>
-                            Items
+                            Experts <br/>
+                            In Our <br/>
+                            Reach
                         </h1>
                     </div>
                     <div className="flexColStart hero-des">
-                        <span className = "secondaryText">Find a variety of items that suit you very easily</span>
-                        <span className = "secondaryText">Forget all difficulties in finding a good product for you</span>
+                        <span className = "secondaryText">No more barriar to reach out medical experts</span>
+                        <span className = "secondaryText">Health is the main priority, so is the medical education.</span>
                     </div>
                     <div className = "flexCenter stats">
                         <div className = "flexColCenter stat">
@@ -30,7 +30,7 @@ const Hero = () => {
                                 <CountUp start = {8800} end = {9000} duration = {2} />
                                 <span>+</span>
                             </span>
-                            <span className = "secondaryText">Premium Products</span>
+                            <span className = "secondaryText">Patients</span>
                         </div>
 
                         <div className = "flexColCenter stat">
@@ -38,7 +38,7 @@ const Hero = () => {
                                 <CountUp start = {1500} end = {2000} duration = {2} />
                                 <span>+</span>
                             </span>
-                            <span className = "secondaryText">Happy Customers</span>
+                            <span className = "secondaryText">Medical Experts</span>
                         </div>
 
                         <div className = "flexColCenter stat">
@@ -55,7 +55,7 @@ const Hero = () => {
                 {/* Right Side */}
                 <div className="flexCenter hero-right">
                     <div className="image-container">
-                        <img src="./hero-image.png" alt="" />
+                        <img src="./hero-image1.jpeg" alt="" />
                     </div>
                 </div>
             </div>

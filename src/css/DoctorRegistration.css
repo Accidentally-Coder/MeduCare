@@ -32,7 +32,7 @@ img {
   padding: 100px;
 }
 
-.btn {
+.btn-rd {
   margin-left: 250px;
   background-color: #6240e8;
   width: 180px;
@@ -41,7 +41,7 @@ img {
   border-radius: 30px;
 }
 
-.btn:hover {
+.btn-rd:hover {
   background-color: #351f65;
   color: #fff;
 }

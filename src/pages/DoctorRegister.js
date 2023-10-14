@@ -62,7 +62,7 @@ function DoctorRegister() {
                         </select>
                         </div>
 
-                        <button type="submit" className="btn">
+                        <button type="submit" className="btn btn-rd">
                         <h4>Register</h4>
                         </button>
                     </form>

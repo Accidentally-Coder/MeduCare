@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Layout from './components/Layout';
 import Appointment from './pages/Appointment';
 import DoctorList from './pages/DoctorList';
+import DoctorRegister from './pages/DoctorRegister';
 import ForgotPassword from './pages/ForgotPassword';
 import Login from './pages/Login';
 import Notification from './pages/Notification';
@@ -26,6 +27,7 @@ function App() {
         <Route path='/appointment' element={<Appointment />} />
         <Route path='/notification' element={<Notification />} />
         <Route path='/doctor-list' element={<DoctorList />} />
+        <Route path='/doctor-register' element={<DoctorRegister />} />
       </Routes>
     </>
   );

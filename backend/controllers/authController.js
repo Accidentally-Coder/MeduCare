@@ -12,10 +12,9 @@ module.exports.registerController = async (req, res) => {
         if (!email || !password || !answer) {
             return res.send({ message: 'All fields are required.' });
         }
-
         // check user from collection
         const existingUser = await userModel.findOne({ email });
-
+        console.log(existingUser);
         //check existing user
         if (existingUser) {
             return res.status(200).send({
@@ -23,18 +22,16 @@ module.exports.registerController = async (req, res) => {
                 message: 'Already Registered! Please log in.',
             });
         }
-
-
         //register user
         const hashedPassword = await authHelper.hashPassword(password);
-
         //save new user to the collection
         const user = await new userModel({
             email,
-            password: hashedPassword,
-            answer
+            password,
+            answer,
+            role:"0"
         }).save();
-
+        
         return res.status(201).send({
             success: true,
             message: 'User Registered Successfully!',

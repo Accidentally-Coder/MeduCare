@@ -1,15 +1,16 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SignUp from './pages/SignUp';
-import Layout from './components/Layout';
-import Header from './components/Header';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
 import Footer from './components/Footer';
-import Login from './pages/Login';
-import ForgotPassword from './pages/ForgotPassword';
+import Header from './components/Header';
+import Layout from './components/Layout';
 import Appointment from './pages/Appointment';
-import Notification from './pages/Notification';
 import DoctorList from './pages/DoctorList';
+import ForgotPassword from './pages/ForgotPassword';
+import Login from './pages/Login';
+import Notification from './pages/Notification';
+import SignUp from './pages/SignUp';
 
 
 function App() {

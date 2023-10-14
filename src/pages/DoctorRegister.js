@@ -40,7 +40,7 @@ function DoctorRegister() {
         <Layout>
             <div class="row">
                 <div class="col">
-                    <img src="doctor.jpg" width={900} height={800} />
+                    <img className='img-dr' src="doctor.jpg" width={900} height={800} />
                 </div>
                 <div class="col">
                     <div className="container">

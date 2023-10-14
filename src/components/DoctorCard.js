@@ -1,8 +1,9 @@
 // from patient's view
 
-import React from 'react'
+import React from 'react';
 
-const DoctorCard = () => {
+const DoctorCard = (props) => {
+  const {name, specialization, phone,email,address,fees} = props;
   return (
     <>
    <div className="card mb-3" style={{maxWidth: 540}}>
@@ -12,17 +13,17 @@ const DoctorCard = () => {
     </div>
     <div className="col-md-8">
       <div className="card-body">
-        <h5 className="card-title">Dr. John Smith</h5>
+        <h5 className="card-title">{name}</h5>
         <p className="card-text">
-          Specialization: Cardiologist
+          Specialization: {specialization}
           <br />
-          Phone: (123) 456-7890
+          Phone: {phone}
           <br />
-          Email: john.smith@example.com
+          Email: {email}
           <br />
-          Address: 123 Main Street, City, State
+          Address: {address}
           <br />
-          Fees: $200 per consultation
+          Fees: ${fees} per consultation
         </p>
         <a href="/appointment" className="btn btn-primary">Take Appointment</a>
       </div>

@@ -14,6 +14,8 @@ import Notification from './pages/Notification';
 import PatientRegister from './pages/PatientRegister';
 import SignUp from './pages/SignUp';
 import HomePage from './pages/HomePage';
+import LandingPage from './pages/LandingPage';
+import RoleRegister from './pages/RoleRegister';
 
 
 function App() {
@@ -21,7 +23,7 @@ function App() {
     <>
       <Routes>
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/' element={<Layout />} />
+        <Route path='/' element={<LandingPage />} />
         <Route path='/header' element={<Header />} />
         <Route path='/footer' element={<Footer />} />
         <Route path='/login' element={<Login />} />
@@ -31,6 +33,8 @@ function App() {
         <Route path='/doctor-list' element={<DoctorList />} />
         <Route path='/doctor-register' element={<DoctorRegister />} />
         <Route path='/patient-register' element={<PatientRegister />} />
+        <Route path='/homepage' element={<HomePage />} />
+        <Route path='/roleregister' element={<RoleRegister />} />
       </Routes>
     </>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import '../css/DoctorRegistration.css';
+import { useState } from 'react';
 
 function DoctorRegister() {
     const [name, setName] = useState("");
@@ -8,26 +9,26 @@ function DoctorRegister() {
     const [license, setLicense] = useState("");
     const [email, setEmail] = useState("");
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await axios.post('http://localhost:8080/api/auth/register-doctor',
-                { name, phone, license, address, email, specialization, fees, avatar });
-            if (res.data.success) {
-                toast.success(res.data.message);
-                //navigate to login page if user registered successfully
-                setTimeout(() => {
-                    navigate("/");
-                }, 1000);
-            } else {
-                toast.error(res.data.message);
-            }
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         const res = await axios.post('http://localhost:8080/api/auth/register-doctor',
+    //             { name, phone, license, address, email, specialization, fees, avatar });
+    //         if (res.data.success) {
+    //             toast.success(res.data.message);
+    //             //navigate to login page if user registered successfully
+    //             setTimeout(() => {
+    //                 navigate("/");
+    //             }, 1000);
+    //         } else {
+    //             toast.error(res.data.message);
+    //         }
 
-        } catch (error) {
-            console.log(error);
-            toast.error('Sorry ! Something went wrong. :(');
-        }
-    }
+    //     } catch (error) {
+    //         console.log(error);
+    //         toast.error('Sorry ! Something went wrong. :(');
+    //     }
+    // }
     return (
         <Layout>
             <div class="row">
@@ -38,7 +39,9 @@ function DoctorRegister() {
                     <div className="container">
                         <div className='box'>
                             <h1>Doctor Registration</h1>
-                            <form onSubmit={handleSubmit}>
+                            <form
+                            // onSubmit={handleSubmit}
+                            >
                                 <div className="mt-4 mb-4">
                                     <label htmlFor="name" className="form-label">
                                         Full Name

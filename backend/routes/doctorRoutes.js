@@ -3,6 +3,6 @@ const router = express.Router();
 const doctorController = require('../controllers/doctorController');
 
 // handleBuy
-router.post('/',doctorController.patient_appointment);
+router.get('/get-doctors',doctorController.getController);
 
 module.exports = router;

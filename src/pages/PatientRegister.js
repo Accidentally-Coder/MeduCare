@@ -45,7 +45,7 @@ const PatientRegister = () => {
                 <div class="col">
                     <div className="container">
                         <div className='box'>
-                            <h1>Patient Registration</h1>
+                            <h1 className='h1-dr'>Patient Registration</h1>
                             <form onSubmit={handleSubmit}>
                                 <div className="mt-4 mb-4">
                                     <label htmlFor="name" className="form-label">

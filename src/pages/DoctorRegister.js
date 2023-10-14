@@ -46,9 +46,7 @@ function DoctorRegister() {
                     <div className="container">
                         <div className='box'>
                             <h1 className='h1-dr'>Doctor Registration</h1>
-                            <form
-                            onSubmit={handleSubmit}
-                            >
+                            <form onSubmit={handleSubmit}>
                                 <div className="mt-4 mb-4">
                                     <label htmlFor="name" className="form-label">
                                         Full Name

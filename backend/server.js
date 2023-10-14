@@ -11,8 +11,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-//routes
-app.use('/api/doctorRoute', doctorRoutes);
+
 
 //config database
 connectDB();
@@ -22,6 +21,7 @@ const PORT = process.env.PORT || 8080;
 
 // routes
 app.use('/api/auth', authRoutes);
+app.use('/api/doctor', doctorRoutes);
 
 app.listen(PORT, () => {
     console.log(`MeduCare Running on port ${PORT}`);

@@ -3,27 +3,28 @@
 import React from 'react';
 
 const DoctorCard = (props) => {
-  const {name, specialization, phone,email,address,fees} = props;
+  const {doctor} = props;
+  console.log(doctor);
   return (
     <>
    <div className="card mb-3" style={{maxWidth: 540}}>
   <div className="row g-0">
     <div className="col-md-4">
-      <img src="doctor_image.jpg" className="img-fluid rounded-start" alt="Doctor Image" />
+      <img src="dummy.jpg" className="img-fluid" alt="Doctor Image" />
     </div>
     <div className="col-md-8">
       <div className="card-body">
-        <h5 className="card-title">{name}</h5>
+        <h5 className="card-title">{doctor.name}</h5>
         <p className="card-text">
-          Specialization: {specialization}
+          Specialization: {doctor.specialization}
           <br />
-          Phone: {phone}
+          Phone: {doctor.phone}
           <br />
-          Email: {email}
+          Email: {doctor.email}
           <br />
-          Address: {address}
+          Address: {doctor.address}
           <br />
-          Fees: ${fees} per consultation
+          Fees: ${doctor.fees} per consultation
         </p>
         <a href="/appointment" className="btn btn-primary">Take Appointment</a>
       </div>

@@ -1,6 +1,6 @@
 /* DoctorRegistration.css */
 .container {
-  padding-top: 150px;
+  padding-top: 50px;
   /* padding-left: 350px; */
   max-width: 800px;
   /* margin-left: 650px; */
@@ -41,6 +41,7 @@ img {
   border-radius: 30px;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background-color: #351f65;
+  color: #fff;
 }

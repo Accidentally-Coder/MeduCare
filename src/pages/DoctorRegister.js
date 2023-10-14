@@ -34,10 +34,32 @@ function DoctorRegister() {
                         </div>
 
                         <div className="mb-4">
+                        <label htmlFor="phone" className="form-label">
+                            Phone Number
+                        </label>
+                        <input type="text" className="form-control" id="phone" placeholder="Enter your phone number" />
+                        </div>
+
+                        <div className="mb-4">
                         <label htmlFor="profilePicture" className="form-label">
                             Profile Picture
                         </label>
                         <input type="file" className="form-control" id="profilePicture" />
+                        </div>
+
+                        <div className="mb-4">
+                        <label htmlFor="specialization" className="form-label">
+                            Specialization
+                        </label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>None</option>
+                            <option value="gn">Gynaecolgy</option>
+                            <option value="pl">Pathology</option>
+                            <option value="im">Internal Medicine</option>
+                            <option value="nl">Neurology</option>
+                            <option value="ul">Urology</option>
+                            <option value="gs">General Surgery</option>
+                        </select>
                         </div>
 
                         <button type="submit" className="btn">

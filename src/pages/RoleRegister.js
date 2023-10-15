@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Layout from '../components/Layout';
 
 const RoleRegister = () => {
     return (

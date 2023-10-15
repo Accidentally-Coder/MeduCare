@@ -7,7 +7,7 @@ const DoctorCard = (props) => {
   console.log(doctor);
   return (
     <>
-   <div className="card mb-3" style={{maxWidth: 540}}>
+   <div className="card m-3" style={{maxWidth: 540}}>
   <div className="row g-0">
     <div className="col-md-4">
       <img src="dummy.jpg" className="img-fluid" alt="Doctor Image" />

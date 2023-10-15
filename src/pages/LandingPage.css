@@ -1,0 +1,9 @@
+/* ImageStyles.css */
+
+.additional-image {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    height: auto; /* Maintain the image's aspect ratio */
+    margin-top: 0px; /* Adjust the top margin as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    border: 1px solid #ccc; /* Add a border if desired */
+}

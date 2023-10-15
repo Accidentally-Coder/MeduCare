@@ -16,4 +16,6 @@ router.post('/login', authController.loginController);
 //forgotPassword
 router.post('/forgot-password', authController.forgotPasswordController);
 
+router.get('/check-role/:id',authController.checkRoleController);
+
 module.exports = router;

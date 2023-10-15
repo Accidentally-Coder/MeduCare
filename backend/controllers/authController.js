@@ -215,3 +215,29 @@ module.exports.registerPatientController = async (req, res) => {
         });
     }
 }
+
+module.exports.checkRoleController = async(req,res) => {
+    try {
+        const {id} = req.params;
+        console.log(id);
+        const data = userModel.findOne({email:id}).projection({role:1});
+        if(data){
+            console.log(data);
+            return res.status(200).send({
+                success:true,
+                role:data.role,
+            })
+        }
+        else{
+            return res.status(501).send({
+                success: false
+            })
+        }
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send({
+            success:false
+        });
+    }
+}

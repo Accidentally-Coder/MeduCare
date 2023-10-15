@@ -66,7 +66,7 @@ const Header = () => {
                                             <RiNotification2Fill size={28} /> Notification
                                         </NavLink>
                                         <NavLink to='/' className='nav-link'>{auth?.user?.name}</NavLink>
-                                        <NavLink to="/login" className="nav-link" href="#">
+                                        <NavLink to="/" className="nav-link" href="#">
                                             <SlLogout size={30} onClick={handleLogout} />LogOut
                                         </NavLink>
                                     </>

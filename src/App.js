@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import { useAuth } from './context/auth';
 import Appointment from './pages/Appointment';
 import DoctorList from './pages/DoctorList';
 import DoctorRegister from './pages/DoctorRegister';
@@ -21,11 +22,12 @@ import PublicPostCard from './components/PublicPostCard';
 
 
 function App() {
+  const [auth] = useAuth();
   return (
     <>
       <Routes>
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/' element={<LandingPage />} />
+        <Route path='/' element={auth.user?<HomePage />:<LandingPage />} />
         <Route path='/header' element={<Header />} />
         <Route path='/footer' element={<Footer />} />
         <Route path='/login' element={<Login />} />

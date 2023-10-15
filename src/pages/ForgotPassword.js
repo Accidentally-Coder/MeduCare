@@ -90,8 +90,7 @@ const ForgotPassword = () => {
                         Please fill up the form with correct answer to the key Question, set your new password and
                         you are good to start again.
                         <br />
-                        <br />
-                        HAPPY SHOPPING!
+
                     </p>
 
                 </div>

@@ -12,7 +12,7 @@ const Footer = () => {
                 <Link to="/contact"><span className='hover-effect'> Contact </span></Link>|
             </h5>
             <h6 className='text-center'>
-                <LuCopyright />2023 Ecommerce | All rights reserved
+                <LuCopyright />2023 MeduCare | All rights reserved
             </h6>
 
             <style>

@@ -15,6 +15,9 @@ import Notification from './pages/Notification';
 import PatientRegister from './pages/PatientRegister';
 import RoleRegister from './pages/RoleRegister';
 import SignUp from './pages/SignUp';
+import Video from './pages/Video';
+import QnA from './pages/QnA';
+import PublicPostCard from './components/PublicPostCard';
 
 
 function App() {
@@ -34,6 +37,10 @@ function App() {
         <Route path='/patient-register' element={<PatientRegister />} />
         <Route path='/homepage' element={<HomePage />} />
         <Route path='/roleregister' element={<RoleRegister />} />
+        <Route path='/video' element={<Video />} />
+        <Route path='/qna' element={<QnA />} />
+        <Route path='/publicpostcard' element={<PublicPostCard />} />
+
       </Routes>
     </>
   );

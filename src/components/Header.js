@@ -24,7 +24,7 @@ const Header = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ height: '100px', backgroundColor: '#060212' }}>
                 <div className="container-fluid">
-                    <NavLink to="/" className="navbar-brand">AppName</NavLink>
+                    <NavLink to="/" className="navbar-brand"><b>MeduCare</b></NavLink>
                     <button
                         className="navbar-toggler"
                         type="button"

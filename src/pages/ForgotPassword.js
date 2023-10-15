@@ -44,7 +44,7 @@ const ForgotPassword = () => {
                 <div className="col-lg-6" style={{
                     height: '500px', width: '600px'
                 }}>
-                    < h6 className="text-left mt-2" > Ecommerce</h6>
+                    < h6 className="text-left mt-2" > <b>MeduCare</b></h6>
                     <h4 class="fw-bold text-center mt-5 mb-5">Reset Password</h4>
 
                     <form

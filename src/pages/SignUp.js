@@ -44,7 +44,7 @@ const Signup = () => {
                 <div className="col-lg-6" style={{
                     height: '600px', width: '600px'
                 }}>
-                    < h6 className="text-left mt-2" > AppName</h6>
+                    < h6 className="text-left mt-2" > <b>MeduCare</b></h6>
                     <h4 class="fw-bold text-center mt-5 mb-5">Register your Account</h4>
 
                     <form onSubmit={handleSubmit}>

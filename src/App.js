@@ -19,6 +19,9 @@ import SignUp from './pages/SignUp';
 import Video from './pages/Video';
 import QnA from './pages/QnA';
 import PublicPostCard from './components/PublicPostCard';
+import BlogPage from './pages/BlogPage';
+import Sidebar from './components/Sidebar';
+import VideoPage from './pages/VideoPage';
 
 
 function App() {
@@ -27,7 +30,7 @@ function App() {
     <>
       <Routes>
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/' element={auth.user?<HomePage />:<LandingPage />} />
+        <Route path='/' element={auth.user ? <HomePage /> : <LandingPage />} />
         <Route path='/header' element={<Header />} />
         <Route path='/footer' element={<Footer />} />
         <Route path='/login' element={<Login />} />
@@ -37,11 +40,11 @@ function App() {
         <Route path='/doctor-list' element={<DoctorList />} />
         <Route path='/doctor-register' element={<DoctorRegister />} />
         <Route path='/patient-register' element={<PatientRegister />} />
-        <Route path='/homepage' element={<HomePage />} />
+        <Route path='/blogpage' element={<BlogPage />} />
         <Route path='/roleregister' element={<RoleRegister />} />
-        <Route path='/video' element={<Video />} />
+        <Route path='/videopage' element={<VideoPage />} />
         <Route path='/qna' element={<QnA />} />
-        <Route path='/publicpostcard' element={<PublicPostCard />} />
+        <Route path='/sidebar' element={<Sidebar />} />
 
       </Routes>
     </>

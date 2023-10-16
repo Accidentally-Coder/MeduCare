@@ -1,3 +1,5 @@
+// will not follow this probably
+
 import React from 'react'
 import "../css/PublicPostCard.css"
 function PublicPostCard() {

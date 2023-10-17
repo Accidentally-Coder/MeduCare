@@ -6,6 +6,9 @@ const dotenv = require("dotenv");
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes');
+const blogRoutes = require('./routes/blogRoutes');
+
+
 //configure env
 dotenv.config();
 
@@ -24,6 +27,8 @@ const PORT = process.env.PORT || 8080;
 app.use('/api/auth', authRoutes);
 app.use('/api/doctor', doctorRoutes);
 app.use('/api/appointment', appointmentRoutes);
+app.use('/api/blog', blogRoutes);
+
 
 app.listen(PORT, () => {
     console.log(`MeduCare Running on port ${PORT}`);

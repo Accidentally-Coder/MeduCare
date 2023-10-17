@@ -8,7 +8,7 @@ const patientModel = require("../models/patientModel");
 module.exports.registerController = async (req, res) => {
     try {
         const { email, answer, password, } = req.body;
-        console.log(email, password, answer);
+        // console.log(email, password, answer);
 
         //validation
         if (!email || !password || !answer) {
@@ -216,19 +216,19 @@ module.exports.registerPatientController = async (req, res) => {
     }
 }
 
-module.exports.checkRoleController = async(req,res) => {
+module.exports.checkRoleController = async (req, res) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
         console.log(id);
-        const data = userModel.findOne({email:id}).projection({role:1});
-        if(data){
+        const data = userModel.findOne({ email: id }).projection({ role: 1 });
+        if (data) {
             console.log(data);
             return res.status(200).send({
-                success:true,
-                role:data.role,
+                success: true,
+                role: data.role,
             })
         }
-        else{
+        else {
             return res.status(501).send({
                 success: false
             })
@@ -237,7 +237,7 @@ module.exports.checkRoleController = async(req,res) => {
     } catch (error) {
         console.log(error);
         return res.status(500).send({
-            success:false
+            success: false
         });
     }
 }
